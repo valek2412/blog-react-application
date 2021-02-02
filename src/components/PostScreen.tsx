@@ -20,7 +20,7 @@ const PostScreen: React.FC = () => {
 
   useEffect(() => {
     dispatch(getPostById(id));
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   return (
     <Wrapper>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import axios from 'axios';
 import { H1, Paragraph } from '../styles/typography';
@@ -33,7 +34,9 @@ const PostListItem: React.FC<Props> = ({ id, title, body }) => {
   return (
     <Wrapper>
       <Header>
-        <H1>{title}</H1>
+        <Link to={`/posts/${id}`}>
+          <H1>{title}</H1>
+        </Link>
       </Header>
       <Body>
         <Paragraph>{body}</Paragraph>
